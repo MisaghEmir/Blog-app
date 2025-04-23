@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,10 +6,11 @@ import { MdWbSunny } from "react-icons/md";
 import { HiMoon } from "react-icons/hi2";
 import { LuMenu } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
-
+import { useThemeMode } from "@/context/ThemeMode";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, ThemeMode } = useThemeMode();
   return (
     <header className="text-center py-4 px-4 flex justify-between items-center">
       <span>
@@ -35,7 +36,19 @@ function Header() {
             </li>
           </div>
           <div className="pb-1 md:pb-0">
-            <HiMoon size={20} cursor={"pointer"} />
+            {theme ? (
+              <MdWbSunny
+                size={20}
+                cursor={"pointer"}
+                onClick={ThemeMode.toggleThemeMode}
+              />
+            ) : (
+              <HiMoon
+                size={20}
+                cursor={"pointer"}
+                onClick={ThemeMode.toggleThemeMode}
+              />
+            )}
           </div>
           <div className="md:hidden">
             <button
