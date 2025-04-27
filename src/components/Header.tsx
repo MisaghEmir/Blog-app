@@ -12,7 +12,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, ThemeMode } = useThemeMode();
   return (
-    <header className="text-center py-4 px-4 flex justify-between items-center">
+    <header className="text-center py-4 flex justify-between items-center">
       <span>
         <Link href={"/"}>
           <Image
@@ -27,7 +27,7 @@ function Header() {
       </span>
       <nav>
         <ul className="flex items-center gap-10 text-[16px] font-bold ">
-          <div className=" hidden md:flex items-center gap-10">
+          <div className=" hidden md:flex items-center gap-10 dark:text-white">
             <li>
               <Link href={"/tags"}>Tags</Link>
             </li>
@@ -35,7 +35,7 @@ function Header() {
               <Link href={"/about"}>About</Link>
             </li>
           </div>
-          <div className="pb-1 md:pb-0">
+          <div className="pb-1 md:pb-0 dark:text-white">
             {theme ? (
               <MdWbSunny
                 size={20}
