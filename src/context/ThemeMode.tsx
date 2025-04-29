@@ -13,7 +13,7 @@ const geistSans = Geist({
   });
 
 type themeMode = {
-  theme: Boolean;
+  theme: boolean;
   ThemeMode: { toggleThemeMode: () => void };
 };
 type toggleThemeModeType = {
@@ -28,8 +28,8 @@ const ThemeM: themeMode = {
 const ThemeModeContext = createContext<themeMode>(ThemeM);
 
 const useThemeModeFunction = () => {
-  const [theme, setTheme] = useState<Boolean>(false);
-  
+  const [theme, setTheme] = useState<boolean>(false);
+
   useMemo(async () => {}, []);
   const ThemeMode: toggleThemeModeType = {
     toggleThemeMode: () => {
