@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeMode";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +21,9 @@ export default function RootLayout({
       <ThemeProvider>
         <div className="max-w-5xl mx-auto p-5 px-10">
           <Header />
-          <main>{children}</main>
+          <main className="mt-16">
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </main>
           <Footer />
         </div>
       </ThemeProvider>
