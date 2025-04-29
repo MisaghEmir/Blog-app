@@ -43,7 +43,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const { theme, ThemeMode } = useThemeModeFunction();
   return (
     <ThemeModeContext value={{ theme, ThemeMode }}>
-      <body className={`${theme ? "dark bg-black" : "light"} ${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body style={{backgroundColor: theme ? " #0a0a0a" : "#ffffff"}} className={`${theme ? "dark" : "light"} ${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </ThemeModeContext>
   );
 };

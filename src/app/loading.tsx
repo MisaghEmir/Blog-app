@@ -1,3 +1,4 @@
+"use client"
 import { useThemeMode } from '@/context/ThemeMode'
 import React from 'react'
 import { Atom } from 'react-loading-indicators'
