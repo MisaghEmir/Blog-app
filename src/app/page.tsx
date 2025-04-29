@@ -16,6 +16,7 @@ export default function Home() {
       };
       fetchPosts();
     } catch (error) {
+      console.log(error)
       throw Error();
     } finally {
       setLoading(false);
