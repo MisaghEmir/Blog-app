@@ -29,7 +29,8 @@ const ThemeModeContext = createContext<themeMode>(ThemeM);
 
 const useThemeModeFunction = () => {
   const [theme, setTheme] = useState<Boolean>(false);
-
+  
+  useMemo(async () => {}, []);
   const ThemeMode: toggleThemeModeType = {
     toggleThemeMode: () => {
       setTheme(!theme);
