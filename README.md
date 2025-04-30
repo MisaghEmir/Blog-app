@@ -5,6 +5,16 @@ This project is designed to showcase blog posts, demonstrate dynamic routing, st
 
 The app includes reusable components, clean layout, SEO optimization, and responsive design — perfect as a base for personal blogs, developer portfolios, or content-focused websites.
 
+### 📷 Screenshot:
+
+![App Screenshot](./screen.jpg)
+
+### 🌐 Demo
+
+[مشاهده نسخه لایو](https://blog-app-w56w.onrender.com)
+
+---
+
 ## Features
 
 - ⚡ Built with Next.js for fast performance
