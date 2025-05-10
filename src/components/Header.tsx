@@ -50,10 +50,10 @@ function Header() {
               />
             )}
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden ">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 focus:outline-none cursor-pointer"
+              className="text-gray-700 dark:text-white focus:outline-none cursor-pointer"
             >
               {!isOpen && <LuMenu />}
             </button>

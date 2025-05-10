@@ -27,9 +27,9 @@ export default function Home() {
   }
 
   return (
-    <div className="py-4">
+    <div className="py-4 mt-10 px-3">
       <ul className="space-y-4">
-        <li className=" pb-10 items-start pr-40 border-gray-500">
+        <li className=" pb-10 items-start pr-40 border-gray-500 border-b">
           <h1 className="text-6xl font-semibold dark:text-white">Latest</h1>
           <p className="text-gray-600 dark:text-gray-300 my-7">A blog created with Next.js</p>
         </li>
@@ -45,7 +45,7 @@ export default function Home() {
               key={index}
               className={`py-10 flex gap-28 items-start pr-20 border-gray-500 ${index !== (posts.length - 1) && "border-b"}`}
             >
-              <p className="text-sm text-gray-500 flex-9">{post.date}</p>
+              <p className="text-sm text-gray-500 flex-9 hidden md:block">{post.date}</p>
               <div className=" gap-2 flex-1 ">
                 <Link
                   href={`/posts/${post.slug}`}
@@ -53,7 +53,7 @@ export default function Home() {
                 >
                   {post.title}
                 </Link>
-                <div className="flex gap-3 text-blue-500 mt-1">
+                <div className="md:flex hidden  gap-3 text-blue-500 mt-1">
                   {post.titles.map((item, index) => (
                     <Link
                       href={`/posts/${post.slug}#${item}`}
