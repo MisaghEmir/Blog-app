@@ -48,7 +48,7 @@ export default function Home() {
               <p className="text-sm text-gray-500 flex-9">{post.date}</p>
               <div className=" gap-2 flex-1 ">
                 <Link
-                  href={`/api/posts/${post.slug}`}
+                  href={`/posts/${post.slug}`}
                   className="text-3xl font-semibold dark:text-white hover:underline"
                 >
                   {post.title}
@@ -56,7 +56,7 @@ export default function Home() {
                 <div className="flex gap-3 text-blue-500 mt-1">
                   {post.titles.map((item, index) => (
                     <Link
-                      href={`/api/posts/${post.slug}#${item}`}
+                      href={`/posts/${post.slug}#${item}`}
                       className="hover:text-blue-400 cursor-pointer"
                       key={index}
                     >
@@ -66,7 +66,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-500 dark:text-gray-300 my-7 ">{post.descript}...</p>
                 <span className="text-blue-500 mt-20 font-bold hover:text-blue-400">
-                  <Link href={`/api/posts/${post.slug}`}>Read more →</Link>
+                  <Link href={`/posts/${post.slug}`}>Read more →</Link>
                 </span>
               </div>
             </li>

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider>
-        <div className="max-w-5xl mx-auto p-5 px-10">
+        <div className="max-w-5xl mx-auto p-5 md:px-10">
           <Header />
           <main className="mt-16">
             <Suspense fallback={<Loading />}>{children}</Suspense>

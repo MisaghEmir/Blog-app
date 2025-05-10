@@ -12,7 +12,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, ThemeMode } = useThemeMode();
   return (
-    <header className="text-center py-4 flex justify-between items-center">
+    <header className="text-center py-4 px-4 flex justify-between items-center">
       <span>
         <Link href={"/"}>
           <Image
