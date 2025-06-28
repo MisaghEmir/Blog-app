@@ -4,8 +4,9 @@ import { getPostBySlug } from "@/actions/getPost";
 import Menu from "@/components/Menu";
 
 // کامپوننت برای نمایش جزئیات پست
-const Post = async ({ params }: { params: { slug: string } }) => {
-  const post = await getPostBySlug(params.slug);
+const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
+   const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     return <div>Post not found</div>; // در صورت پیدا نشدن پست
