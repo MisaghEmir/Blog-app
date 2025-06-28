@@ -1,11 +1,6 @@
 // app/posts/[slug]/page.tsx
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPostBySlug } from "@/actions/getPost";
-import { MdOutlineArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import Menu from "@/components/Menu";
 
 // کامپوننت برای نمایش جزئیات پست

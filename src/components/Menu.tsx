@@ -4,7 +4,7 @@ import { MdOutlineArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import Link from "next/link";
 
 type Blog ={
-    title: any; titles: any; date: any; descript: any; content: string;
+    title: string; titles: string[]; date: Date; descript: string; content: string;
 }
 
 const Menu = ({ post }: { post: Blog }) => {

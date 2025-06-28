@@ -20,6 +20,7 @@ export async function getPostBySlug(slug: string) {
       content: content,
     } ;
   } catch (err) {
+    console.log(err)
     notFound(); // اگر پست پیدا نشد، صفحه‌ی 404 را نشان می‌دهد
   }
 }
